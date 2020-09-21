@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="391dp"
+        android:layout_height="340dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/inButton"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="#EA80FC"
+                android:onClick="Incrementar"
+                android:text="Incrementar"
+                android:textColor="#F7FAF7" />
+
+            <Button
+                android:id="@+id/deButton"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#F8C5D6"
+                android:onClick="Decrementar"
+                android:text="Decrementar"
+                android:textColor="#F8F5F7" />
+
+            <Button
+                android:id="@+id/reButton"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#9C27B0"
+                android:onClick="Resetear"
+                android:text="Resetear"
+                android:textColor="#FBF3FB"
+                android:textColorHighlight="#B7AEB3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FBCCC8"
+                android:text="Contador: "
+                android:textAlignment="viewEnd"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_weight="1"
+                android:background="#DEF6E5"
+                android:textAlignment="center"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/numNeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permitir negativos" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E1FDF7"
+                android:text="Valor para resetear" />
+
+            <EditText
+                android:id="@+id/numReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:textColor="#4692AC" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
